@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.common.model.ResultInfo;
 import com.example.demo.service.SendMessageService;
 import com.example.demo.service.UserServcie;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,36 +22,35 @@ public class UserController {
     private SendMessageService sendMessageService;
 
     @RequestMapping(value = "/register")
-    public String register(String userName,String passWord){
+    public ResultInfo register(String userName, String passWord) {
 
-       String result =  userServcie.register(userName,passWord);
+        ResultInfo result = userServcie.register(userName, passWord);
 
         return result;
     }
 
 
     @RequestMapping(value = "/login")
+    public ResultInfo login(String userName, String passWord) {
 
-    public String login(String userName,String passWord){
+        ResultInfo result = userServcie.login(userName, passWord);
 
-    String result = userServcie.login(userName,passWord);
-
-    return  result;
+        return result;
 
     }
 
     @RequestMapping(value = "/forgotPassword")
-    public String forgotPassword(String userName,int id,String passWord){
+    public String forgotPassword(String userName, int id, String passWord) {
 
-        String result = userServcie.forgotPassword(userName,id,passWord);
+        String result = userServcie.forgotPassword(userName, id, passWord);
 
 
-        return  result;
+        return result;
 
     }
 
     @RequestMapping(value = "/sendVerificationCode")
-    public String sendVerificationCode(String userName){
+    public String sendVerificationCode(String userName) {
 
         String result = sendMessageService.sendVerificationCode(userName);
 
