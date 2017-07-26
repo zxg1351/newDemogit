@@ -1,8 +1,10 @@
 package com.example.demo.controller;
 
+import com.example.demo.common.model.ResultInfo;
 import com.example.demo.service.RegionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -25,16 +27,16 @@ public class RegionController {
     }
     //查询城市
     @RequestMapping(value = "/city")
-    public  String selectCity(){
-        String result = regionService.selectCity();
+    public  String selectCity(@RequestParam Integer provinceId,@RequestParam String  mCityId){
+        String result = regionService.selectCity(provinceId,mCityId);
         return result;
 
     }
     //查询省份
     @RequestMapping(value = "/province")
-    public  String selectProvince(){
+    public ResultInfo selectProvince(@RequestParam String provinceName){
 
-        String result = regionService.selectProvince();
+        ResultInfo result = regionService.selectProvince(provinceName);
         return result;
     }
 
