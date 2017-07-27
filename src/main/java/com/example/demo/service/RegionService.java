@@ -9,9 +9,9 @@ public interface RegionService {
 
 
     //查询区域
-    String selectArea();
+    ResultInfo selectArea(Integer mCityId, String mAreaName);
     //查询城市
-      String selectCity(Integer provinceId,String mCityId);
+    ResultInfo selectCity(Integer provinceId,String mCityName);
     //查询省份名称查询省份对应ID
     ResultInfo selectProvince(String provinceName);
 

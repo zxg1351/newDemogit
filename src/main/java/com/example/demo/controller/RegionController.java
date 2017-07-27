@@ -20,15 +20,15 @@ public class RegionController {
 
     //查询区域
     @RequestMapping(value = "/area")
-    public  String selectArea(){
+    public  ResultInfo selectArea(@RequestParam Integer mCityId,@RequestParam String mAreaName){
 
-        String result = regionService.selectArea();
+        ResultInfo result = regionService.selectArea(mCityId,mAreaName);
         return result;
     }
     //查询城市
     @RequestMapping(value = "/city")
-    public  String selectCity(@RequestParam Integer provinceId,@RequestParam String  mCityId){
-        String result = regionService.selectCity(provinceId,mCityId);
+    public  ResultInfo selectCity(@RequestParam Integer provinceId,@RequestParam String  mCityName){
+        ResultInfo result = regionService.selectCity(provinceId,mCityName);
         return result;
 
     }
