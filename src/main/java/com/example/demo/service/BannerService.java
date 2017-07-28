@@ -1,11 +1,13 @@
 package com.example.demo.service;
 
+import com.example.demo.common.model.ResultInfo;
+
 /**
  * Created by Administrator on 2017/7/18.
  */
 public interface BannerService {
 
-    String selectBanner();
+    ResultInfo selectBanner(String mBannerType);
 
-    String selectWelcomePage();
+    ResultInfo selectWelcomePage(String mBannerType);
 }
