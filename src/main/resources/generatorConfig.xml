@@ -51,5 +51,62 @@
             <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
         </table>
 
+        <table schema="" tableName="m_menu" domainObjectName="MMenu" >
+            <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
+        </table>
+
+        <table schema="" tableName="m_role" domainObjectName="MRole" >
+            <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
+        </table>
+
+        <table schema="" tableName="m_user_menu" domainObjectName="MUserMenu" >
+            <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
+        </table>
+        <table schema="" tableName="m_user_role" domainObjectName="MUserRole" >
+            <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
+        </table>
+        <table schema="" tableName="m_vercode" domainObjectName="MVercode" >
+            <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
+        </table>
+        <table schema="" tableName="t_department_designer" domainObjectName="TDepartmentDesigner" >
+            <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
+        </table>
+
+        <table schema="" tableName="t_department_finance" domainObjectName="TDepartmentFinance" >
+            <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
+        </table>
+
+        <table schema="" tableName="t_department_fundesigner" domainObjectName="TDepartmentFundesigner" >
+            <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
+        </table>
+
+        <table schema="" tableName="t_department_manager" domainObjectName="TDepartmentManager" >
+            <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
+        </table>
+
+        <table schema="" tableName="t_department_sales" domainObjectName="TDepartmentSales" >
+            <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
+        </table>
+
+        <table schema="" tableName="t_department_super" domainObjectName="TDepartmentSuper" >
+            <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
+        </table>
+
+        <table schema="" tableName="t_department_worker" domainObjectName="TDepartmentWorker" >
+            <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
+        </table>
+
+        <table schema="" tableName="t_large_area" domainObjectName="TLargeArea" >
+            <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
+        </table>
+
+        <table schema="" tableName="t_order" domainObjectName="TOrder" >
+            <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
+        </table>
+
+
+
+
+
     </context>
 </generatorConfiguration>
