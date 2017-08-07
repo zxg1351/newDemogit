@@ -6,6 +6,9 @@ import com.example.demo.common.model.ResultInfo;
 import com.example.demo.mapper.TLargeAreaMapper;
 import com.example.demo.service.TLargeAreaService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.CollectionUtils;
+
+import java.util.List;
 
 /**
  * Created by Administrator on 2017/7/31.
@@ -20,13 +23,23 @@ public class TLargeAreaServiceImpl implements TLargeAreaService {
 
     @Override
     public ResultInfo selectTLargeArea(Integer largeAreaId, String largeAreaName) {
-        TLargeArea tLargeArea = new TLargeArea();
 
-//        TLargeAreaExample tLargeAreaExample = new TLargeAreaExample();
-//        tLargeAreaExample.createCriteria().
+        ResultInfo resultInfo = new ResultInfo();
+
+        TLargeAreaExample tLargeAreaExample = new TLargeAreaExample();
+        tLargeAreaExample.createCriteria().andLargeAreaIdEqualTo(largeAreaId).andLargeAreaNameEqualTo(largeAreaName);
+        List<TLargeArea>  tLargeAreaList = tLargeAreaMapper.selectByExample(tLargeAreaExample);
+
+        if (!CollectionUtils.isEmpty(tLargeAreaList)){
+
+            resultInfo.setResultCode("0");
+            resultInfo.setResultMessage("查询成功");
+            resultInfo.setAppData(tLargeAreaList);
+
+        }
 
 
 
-        return null;
+        return resultInfo;
     }
 }
