@@ -101,7 +101,7 @@
         </table>
 
         <table schema="" tableName="t_order" domainObjectName="TOrder" >
-            <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
+            <generatedKey column="id" identity="true" sqlStatement="Mysql" ></generatedKey>
         </table>
 
 

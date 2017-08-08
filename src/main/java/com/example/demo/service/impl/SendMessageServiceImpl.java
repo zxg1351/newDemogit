@@ -16,9 +16,16 @@ public class SendMessageServiceImpl implements SendMessageService{
         //需要新建表
         String result  = "success";
         logger.info("成功发送验证码");
+
+
+
+
+
+        //发送短信 需要处理
         ResultInfo resultInfo = new ResultInfo();
         resultInfo.setResultCode("0");
-        return result;
+        resultInfo.setResultMessage("发送成功");
+        return resultInfo;
     }
 
 
