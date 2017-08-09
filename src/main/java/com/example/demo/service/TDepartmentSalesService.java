@@ -11,7 +11,7 @@ public interface TDepartmentSalesService {
     ResultInfo selectAllSales();
 
 
-    ResultInfo selectAllSales(Integer salesId, String salseName);
+    ResultInfo selectSales(Integer salesId, String salseName);
 
 
 

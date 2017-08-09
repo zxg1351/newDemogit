@@ -48,6 +48,8 @@ public class TDepartmentDesignerServiceImpl implements TDepartmentDesignerServic
         return resultInfo;
     }
 
+
+
     /**
      *
      * @param designerId
@@ -55,7 +57,7 @@ public class TDepartmentDesignerServiceImpl implements TDepartmentDesignerServic
      * @return
      */
     @Override
-    public ResultInfo selectAllDesigner(Integer designerId, String designerName) {
+    public ResultInfo selectDesigner(Integer designerId, String designerName) {
 
         ResultInfo resultInfo = new ResultInfo();
         TDepartmentDesigner tDepartmentDesigner = new TDepartmentDesigner();

@@ -11,7 +11,7 @@ public interface TDepartmentDesignerService {
     ResultInfo selectAllDesigner();
 
 
-    ResultInfo selectAllDesigner(Integer designerId,String designerName);
+    ResultInfo selectDesigner(Integer designerId,String designerName);
 
 
 

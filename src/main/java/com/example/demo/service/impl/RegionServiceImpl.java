@@ -88,8 +88,6 @@ public class RegionServiceImpl implements RegionService {
         List<MProvince> mProvinces = mProvinceMapper.selectByExample(mProvinceExample);
 
         if (!CollectionUtils.isEmpty(mProvinces)) {
-
-
             resultInfo.setResultCode("0");
             resultInfo.setResultMessage("查询成功");
             resultInfo.setAppData(mProvinces);

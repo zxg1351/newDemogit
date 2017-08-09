@@ -4,13 +4,13 @@
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 
 <generatorConfiguration>
-    <classPathEntry location="F:\source\git\bmc_rest_versionUp\mybatisgen\mysql-connector-java-6.0.6.jar"/>
+    <classPathEntry location="F:\source\git\bmc_rest_versionUp\mybatisgen\mysql-connector-java-5.1.38.jar"/>
 
     <context id="testTables" targetRuntime="MyBatis3">
         <plugin type="org.mybatis.generator.plugins.SerializablePlugin"></plugin>
         <!--是否除去自动生成的注释 true 是 false否-->
         <commentGenerator>
-            <property name="suppressAllComments" value="false"></property>
+            <property name="suppressAllComments" value="true"></property>
 
         </commentGenerator>
         <!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
@@ -35,72 +35,176 @@
         <javaClientGenerator type="XMLMAPPER" targetPackage="com.example.demo.mapper" targetProject="src/main/java">
             <property name="enableSubPackages" value="true"></property>
         </javaClientGenerator>
-        <table schema="" tableName="m_user" domainObjectName="MUser"  >
+        <table schema="" tableName="m_user" domainObjectName="MUser"
+               enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"
+               enableInsert="true"
+               selectByPrimaryKeyQueryId="true"
+               enableDeleteByPrimaryKey="true"
+               enableSelectByPrimaryKey="true"
+               enableUpdateByPrimaryKey="true">
             <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
         </table>
-        <table schema="" tableName="m_province" domainObjectName="MProvince" >
+        <table schema="" tableName="m_province" domainObjectName="MProvince"
+               enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"
+               enableInsert="true"
+               selectByPrimaryKeyQueryId="true"
+               enableDeleteByPrimaryKey="true"
+               enableSelectByPrimaryKey="true"
+               enableUpdateByPrimaryKey="true">
             <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
         </table>
-        <table schema="" tableName="m_city" domainObjectName="MCity" >
+        <table schema="" tableName="m_city" domainObjectName="MCity"
+               enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"
+               enableInsert="true"
+               selectByPrimaryKeyQueryId="true"
+               enableDeleteByPrimaryKey="true"
+               enableSelectByPrimaryKey="true"
+               enableUpdateByPrimaryKey="true">
             <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
         </table>
-        <table schema="" tableName="m_banner" domainObjectName="MBanner" >
+        <table schema="" tableName="m_banner" domainObjectName="MBanner" enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"
+               enableInsert="true"
+               enableDeleteByPrimaryKey="true"
+               enableSelectByPrimaryKey="true"
+               enableUpdateByPrimaryKey="true">
             <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
         </table>
-        <table schema="" tableName="m_area" domainObjectName="MArea" >
-            <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
-        </table>
-
-        <table schema="" tableName="m_menu" domainObjectName="MMenu" >
-            <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
-        </table>
-
-        <table schema="" tableName="m_role" domainObjectName="MRole" >
-            <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
-        </table>
-
-        <table schema="" tableName="m_user_menu" domainObjectName="MUserMenu" >
-            <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
-        </table>
-        <table schema="" tableName="m_user_role" domainObjectName="MUserRole" >
-            <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
-        </table>
-        <table schema="" tableName="m_vercode" domainObjectName="MVercode" >
-            <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
-        </table>
-        <table schema="" tableName="t_department_designer" domainObjectName="TDepartmentDesigner" >
-            <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
-        </table>
-
-        <table schema="" tableName="t_department_finance" domainObjectName="TDepartmentFinance" >
-            <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
-        </table>
-
-        <table schema="" tableName="t_department_fundesigner" domainObjectName="TDepartmentFundesigner" >
-            <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
-        </table>
-
-        <table schema="" tableName="t_department_manager" domainObjectName="TDepartmentManager" >
-            <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
-        </table>
-
-        <table schema="" tableName="t_department_sales" domainObjectName="TDepartmentSales" >
+        <table schema="" tableName="m_area" domainObjectName="MArea" enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"
+               enableInsert="true"
+               enableDeleteByPrimaryKey="true"
+               enableSelectByPrimaryKey="true"
+               enableUpdateByPrimaryKey="true">
             <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
         </table>
 
-        <table schema="" tableName="t_department_super" domainObjectName="TDepartmentSuper" >
+        <table schema="" tableName="m_menu" domainObjectName="MMenu" enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"
+               enableInsert="true"
+               enableDeleteByPrimaryKey="true"
+               enableSelectByPrimaryKey="true"
+               enableUpdateByPrimaryKey="true">
             <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
         </table>
 
-        <table schema="" tableName="t_department_worker" domainObjectName="TDepartmentWorker" >
+        <table schema="" tableName="m_role" domainObjectName="MRole" enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"
+               enableInsert="true"
+               enableDeleteByPrimaryKey="true"
+               enableSelectByPrimaryKey="true"
+               enableUpdateByPrimaryKey="true">
             <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
         </table>
 
-        <table schema="" tableName="t_large_area" domainObjectName="TLargeArea" >
+        <table schema="" tableName="m_user_menu" domainObjectName="MUserMenu" enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"
+               enableInsert="true"
+               enableDeleteByPrimaryKey="true"
+               enableSelectByPrimaryKey="true"
+               enableUpdateByPrimaryKey="true">
+            <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
+        </table>
+        <table schema="" tableName="m_user_role" domainObjectName="MUserRole" enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"
+               enableInsert="true"
+               enableDeleteByPrimaryKey="true"
+               enableSelectByPrimaryKey="true"
+               enableUpdateByPrimaryKey="true">
+            <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
+        </table>
+        <table schema="" tableName="m_vercode" domainObjectName="MVercode" enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"
+               enableInsert="true"
+               enableDeleteByPrimaryKey="true"
+               enableSelectByPrimaryKey="true"
+               enableUpdateByPrimaryKey="true">
+            <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
+        </table>
+        <table schema="" tableName="t_department_designer" domainObjectName="TDepartmentDesigner"
+               enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"
+               enableInsert="true"
+               enableDeleteByPrimaryKey="true"
+               enableSelectByPrimaryKey="true"
+               enableUpdateByPrimaryKey="true">
             <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
         </table>
 
-        <table schema="" tableName="t_order" domainObjectName="TOrder" >
+        <table schema="" tableName="t_department_finance" domainObjectName="TDepartmentFinance"
+               enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"
+               enableInsert="true"
+               enableDeleteByPrimaryKey="true"
+               enableSelectByPrimaryKey="true"
+               enableUpdateByPrimaryKey="true">
+            <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
+        </table>
+
+        <table schema="" tableName="t_department_fundesigner" domainObjectName="TDepartmentFundesigner"
+               enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"
+               enableInsert="true"
+               enableDeleteByPrimaryKey="true"
+               enableSelectByPrimaryKey="true"
+               enableUpdateByPrimaryKey="true">
+            <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
+        </table>
+
+        <table schema="" tableName="t_department_manager" domainObjectName="TDepartmentManager" enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"
+               enableInsert="true"
+               enableDeleteByPrimaryKey="true"
+               enableSelectByPrimaryKey="true"
+               enableUpdateByPrimaryKey="true">
+            <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
+        </table>
+
+        <table schema="" tableName="t_department_sales" domainObjectName="TDepartmentSales" enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"
+               enableInsert="true"
+               enableDeleteByPrimaryKey="true"
+               enableSelectByPrimaryKey="true"
+               enableUpdateByPrimaryKey="true">
+            <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
+        </table>
+
+        <table schema="" tableName="t_department_super" domainObjectName="TDepartmentSuper" enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"
+               enableInsert="true"
+               enableDeleteByPrimaryKey="true"
+               enableSelectByPrimaryKey="true"
+               enableUpdateByPrimaryKey="true">
+            <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
+        </table>
+
+        <table schema="" tableName="t_department_worker" domainObjectName="TDepartmentWorker" enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"
+               enableInsert="true"
+               enableDeleteByPrimaryKey="true"
+               enableSelectByPrimaryKey="true"
+               enableUpdateByPrimaryKey="true">
+            <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
+        </table>
+
+        <table schema="" tableName="t_large_area" domainObjectName="TLargeArea" enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"
+               enableInsert="true"
+               enableDeleteByPrimaryKey="true"
+               enableSelectByPrimaryKey="true"
+               enableUpdateByPrimaryKey="true">
+            <generatedKey column="id" identity="true" sqlStatement="Mysql"></generatedKey>
+        </table>
+
+        <table schema="" tableName="t_order" domainObjectName="TOrder" enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"
+               enableInsert="true"
+               enableDeleteByPrimaryKey="true"
+               enableSelectByPrimaryKey="true"
+               enableUpdateByPrimaryKey="true">
             <generatedKey column="id" identity="true" sqlStatement="Mysql" ></generatedKey>
         </table>
 
