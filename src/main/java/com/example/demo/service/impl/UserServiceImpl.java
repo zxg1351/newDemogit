@@ -110,9 +110,6 @@ public class UserServiceImpl implements UserServcie {
 
 
         return resultInfo;
-
-//
-//        return gson.toJson(result);
     }
     //忘记密码
     @Override

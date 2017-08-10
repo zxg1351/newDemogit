@@ -38,8 +38,6 @@ public class TLargeAreaServiceImpl implements TLargeAreaService {
 
         }
 
-
-
         return resultInfo;
     }
 }

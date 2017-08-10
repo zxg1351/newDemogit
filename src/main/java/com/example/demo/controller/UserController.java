@@ -50,9 +50,9 @@ public class UserController {
     }
 
     @RequestMapping(value = "/sendVerificationCode")
-    public String sendVerificationCode(String userName) {
+    public ResultInfo sendVerificationCode(String userName) {
 
-        String result = sendMessageService.sendVerificationCode(userName);
+        ResultInfo result = sendMessageService.sendVerificationCode(userName);
 
         return result;
 

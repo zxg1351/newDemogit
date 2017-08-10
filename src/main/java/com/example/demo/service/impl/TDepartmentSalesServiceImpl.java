@@ -52,7 +52,7 @@ public class TDepartmentSalesServiceImpl implements TDepartmentSalesService
     }
 
     @Override
-    public ResultInfo selectAllSales(Integer salesId, String salseName) {
+    public ResultInfo selectSales(Integer salesId, String salseName) {
 
         ResultInfo resultInfo = new ResultInfo();
 
@@ -75,8 +75,6 @@ public class TDepartmentSalesServiceImpl implements TDepartmentSalesService
             resultInfo.setResultCode("1");
 
         }
-
-
 
         return resultInfo;
     }
