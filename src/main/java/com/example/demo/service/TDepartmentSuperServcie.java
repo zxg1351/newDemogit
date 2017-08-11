@@ -8,7 +8,7 @@ import com.example.demo.common.model.ResultInfo;
 public interface TDepartmentSuperServcie {
 
 
-    ResultInfo selectAllTDepartmentManager();
+ResultInfo selectAllTDepartmentManager();
 
     ResultInfo selectTDepartmentManager(Integer managerId,String managerName);
 }
