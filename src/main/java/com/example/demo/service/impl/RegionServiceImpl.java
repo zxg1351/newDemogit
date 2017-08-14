@@ -23,8 +23,6 @@ public class RegionServiceImpl implements RegionService {
 
     @Autowired
     private MCityMapper mCityMapper;
-
-
     @Autowired
     private MProvinceMapper mProvinceMapper;
     @Autowired

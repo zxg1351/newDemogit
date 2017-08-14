@@ -40,15 +40,20 @@ public class UserController {
     }
 
     @RequestMapping(value = "/forgotPassword")
-    public String forgotPassword(String userName, int id, String passWord) {
+    public ResultInfo forgotPassword(String userName, int id, String passWord,String code) {
 
-        String result = userServcie.forgotPassword(userName, id, passWord);
+        ResultInfo result = userServcie.forgotPassword(userName, id, passWord,code);
 
 
         return result;
 
     }
 
+    /**
+     * 发送短信验证码
+     * @param userName
+     * @return
+     */
     @RequestMapping(value = "/sendVerificationCode")
     public ResultInfo sendVerificationCode(String userName) {
 

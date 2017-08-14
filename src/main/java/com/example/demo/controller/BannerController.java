@@ -20,7 +20,7 @@ public class BannerController {
     @Autowired
     private BannerService bannerService;
 
-    @RequestMapping(value = "/banner")
+    @RequestMapping(value = "/selectBanner")
     public ResultInfo selectBanner(@RequestParam  String mBannerType){
 
         ResultInfo result = bannerService.selectBanner(mBannerType);
@@ -29,7 +29,7 @@ public class BannerController {
 
     }
 
-    @RequestMapping(value = "/welcome")
+    @RequestMapping(value = "/selectWelcome")
     public ResultInfo selectWelcomePage(@RequestParam  String mBannerType){
 
         ResultInfo result = bannerService.selectWelcomePage(mBannerType);

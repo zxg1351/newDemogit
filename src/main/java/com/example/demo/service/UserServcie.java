@@ -31,5 +31,5 @@ public interface UserServcie {
      * @param passWord
      * @return
      */
-     String forgotPassword(String userName,int id,String passWord);
+    ResultInfo forgotPassword(String userName,int id,String passWord,String code);
 }
